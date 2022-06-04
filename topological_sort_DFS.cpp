@@ -4,12 +4,12 @@
 #include<stack>
 using namespace std;
 class graph{
-    vector<list<int>> adj;
+    list<int> *adj;// We are making a list of pointers so that each pointer will hold the adjacet vertices of the inserted vertice
     int V;
     public:
         graph(int v){
             this->V=v;
-            adj.resize(V+1);
+            adj->resize(V+1);// Resizing the list to accomodate all the vertices
         }
         void addedge(int u,int v){
             adj[u].push_back(v);
