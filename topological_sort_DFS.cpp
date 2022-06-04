@@ -9,7 +9,7 @@ class graph{
     public:
         graph(int v){
             this->V=v;
-            adj->resize(V+1);// Resizing the list to accomodate all the vertices
+            adj=new list<int>[V+1];// Resizing the list to accomodate all the vertices
         }
         void addedge(int u,int v){
             adj[u].push_back(v);
