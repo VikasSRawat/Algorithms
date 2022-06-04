@@ -10,7 +10,7 @@ class graph{
     public:
         graph(int v){
             this->V=v;
-            adj->resize(V+1);
+            adj=new list<int>[V+1];
         }
         void addedge(int u,int v){
             adj[u].push_back(v);
