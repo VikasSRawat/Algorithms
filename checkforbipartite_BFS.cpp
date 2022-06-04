@@ -6,13 +6,13 @@
 using namespace std;
 class graph{
     int V;//Number of vertices in the graph excluding 0
-    vector<list<int>> adj;//adjacency list
+    list<int> *adj//adjacency list
 
     public:
 
         graph(int v){
             this->V=v;
-            adj.resize(V+1);
+            adj=new list<int>[V+1];
         }
         void addedge(int u,int v)//u-starting vertice of the edge      v-ending vertice of the edge
         {
