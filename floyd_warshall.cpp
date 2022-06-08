@@ -17,7 +17,7 @@ void negative_cycle(int adj[V][V]){
 
     for(int i=0;i<V;i++){
         for(int j=0;j<V;j++){
-            if(adj[i][j]==-1){
+            if(adj[i][j]<=-1){
                 cout<<"Negative edge cycle detected"<<endl;
                 return;
             }
