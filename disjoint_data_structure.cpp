@@ -26,8 +26,9 @@ class DisjointSet{
             parent[ult_pu] = ult_pv;
         }
         else{
-            parent[ult_pv] = ult_pv;
+            parent[ult_pv] = ult_pu;
             rank[ult_pu]++;
+        }
     }
 };
 int main(){
