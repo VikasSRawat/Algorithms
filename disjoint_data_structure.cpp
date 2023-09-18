@@ -46,6 +46,11 @@ int main(){
         cout<<"Same component"<<endl;
     else
         cout<<"Not Same component"<<endl;
-    
+    // To find the out the number of components we just need to check how many different types of ultimate parents exists
+    int count = 0;
+    for(int i = 0 ; i < ds.parent.size() ; i++)
+        if(ds.parent[i] == i)
+            count++;
+    cout<<"Number of components are : "<<count<<endl;
     return 0;
 }
