@@ -22,7 +22,7 @@ void primMST(int V,vector<pair<int,int>> adj[]){
 
     while(!pq.empty()){
 
-        int u=pq.top().first;
+        int u=pq.top().second;
         pq.pop();
         MST[u]=true;
 
@@ -36,7 +36,7 @@ void primMST(int V,vector<pair<int,int>> adj[]){
                 // than the mentioned in the distance vector then :
                 parent[v]=u;// We update the parent vector for the adjacent vector
                 distance[v]=wt;
-                pq.push({v,wt});//we push the new edge weight and the vertice onto the queue and then check for its adjacent vertice
+                pq.push({wt,v});//we push the new edge weight and the vertice onto the queue and then check for its adjacent vertice
             }
         }
     }
