@@ -13,12 +13,12 @@ void primMST(int V,vector<pair<int,int>> adj[]){
     vector<int> distance(V,INT_MAX); //Distance will keep track of the index's distance(edge weight) from its parent
 
 
-    priority_queue<pair<int,int>, vector<pair<int,int>>, greater<pair<int,int>> > pq;// weight , vertice pairs will be inserted into the priority with the priority set given to the weights( in min heap order)
+    priority_queue<pair<int,int>, vector<pair<int,int>>, greater<pair<int,int>> > pq;// min priority queue is formed i.e., smallest value is on the top(compared on the basis of first value if they are equal then the second value is compared)
     
     distance[0]=0;// Distance of the source from itself will always be 0
     parent[0]=0;
 
-    pq.push({0,0});
+    pq.push({0,0}); // pushing the edgewt and vertice into the priority queue so that the get sorted according to weight
 
     while(!pq.empty()){
 
