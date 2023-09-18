@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 class DisjointSet{
+    public:
     vector<int> rank,parent;
     DisjointSet(int n){
         rank.resize(n+1,0); // initially all the ranks will be the same due to the fact that all are componenets themselves
